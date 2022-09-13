@@ -19,15 +19,12 @@ jobs:
       steps: 
         - checkout
         - setup_remote_docker
-        - run:
-          name: Install `docker-compose`
-          command: |
-            curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-            chmod +x ~/docker-compose
-            sudo mv ~/docker-compose /usr/local/bin/docker-compose
         - run: 
             name: Publish Docker Image to Docker Hub
             command: |
+              curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
+              chmod +x ~/docker-compose
+              sudo mv ~/docker-compose /usr/local/bin/docker-compose
               echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
               docker-compose -f docker-compose-build.yaml build --parallel
               docker push $IMAGE_NAME
