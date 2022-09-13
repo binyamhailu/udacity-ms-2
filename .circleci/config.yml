@@ -33,7 +33,7 @@ jobs:
               docker push binwelbeck/reverseproxy
               docker push binwelbeck/udagram-api-user
               docker push binwelbeck/udagram-api-feed
-              docker push binwelbeck/udagram-api-feed
+              docker push binwelbeck/udagram-frontend
 
 
               
