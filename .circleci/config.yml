@@ -19,7 +19,7 @@ jobs:
       steps: 
         - checkout
         - setup_remote_docker
-         - run:
+        - run:
           name: Install `docker-compose`
           command: |
             curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
