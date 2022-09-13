@@ -30,6 +30,7 @@ jobs:
               echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
               set COMPOSE_TLS_VERSION=TLSv1_2
               docker-compose build --no-cache
+              docker push binwelbeck/reverseproxy
               
 workflows:
   version: 2
