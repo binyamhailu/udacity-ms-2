@@ -31,6 +31,11 @@ jobs:
               set COMPOSE_TLS_VERSION=TLSv1_2
               docker-compose build --no-cache
               docker push binwelbeck/reverseproxy
+              docker push binwelbeck/udagram-api-user
+              docker push binwelbeck/udagram-api-feed
+              docker push binwelbeck/udagram-api-feed
+
+
               
 workflows:
   version: 2
