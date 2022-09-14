@@ -14,7 +14,7 @@ Reverse Proxy
 Getting Started
 
 Clone the github project by running:
-git clone https://github.com/mengestu/udacity-microservice-project
+git clone https://github.com/mengestu/udacity-ms-2
 
 Update the following configuration files
 
